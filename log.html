@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title> Quiz </title>
+    <link rel="icon" href="icon.png" type="icon/png">
+    <link rel="stylesheet" type="text/css" href="log.css">   
+</head>
+    <body>
+    <div class="login-box" >
+    <img src="avatar.png" class="avatar">
+        <h1>Login Here</h1>
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username" id="username" >
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password" id="password">
+            <input type="button" name="button" value="Login" onclick="Login()">
+            <a href="#">Forget Password</a>    
+
+        </div>
+    <script>
+function Login()
+{let username=document.getElementById("username").value;
+    let password=document.getElementById("password").value;
+if (username==null||username==""){
+alert("fill username")
+}
+else if(password==null||password==""){
+alert("fill password")
+}
+else{
+localStorage.setItem("username",username)
+document.location.href="Quiz.html"
+}
+}
+
+    </script>
+    </body>
+</html>
